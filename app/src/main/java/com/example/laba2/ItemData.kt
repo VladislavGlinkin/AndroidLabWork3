@@ -36,4 +36,13 @@ class ItemDataViewModel : ViewModel() {
         currentList.remove(item)
         _dataList.value = currentList
     }
+
+    fun updateItem(oldItem: ItemData, newItem: ItemData) {
+        val currentList = _dataList.value.orEmpty().toMutableList()
+        val index = currentList.indexOf(oldItem)
+        if (index != -1) {
+            currentList[index] = newItem
+            _dataList.value = currentList
+        }
+    }
 }

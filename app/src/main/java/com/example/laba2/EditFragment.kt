@@ -57,6 +57,10 @@ class EditFragment : Fragment() {
             val newCpu = binding.editText3.text.toString()
             val newRam = binding.editText4.text.toString()
 
+            val updatedItem = ItemData(newTitle,newDescription,newCpu,newRam)
+            val oldItem = ItemData(title, description, cpu, ram)
+            viewModel.updateItem(oldItem, updatedItem)
+
             // Навигация с обновленными значениями аргументов
             val action = EditFragmentDirections.actionEditFragmentToDetailFragment(
                 title = newTitle,
