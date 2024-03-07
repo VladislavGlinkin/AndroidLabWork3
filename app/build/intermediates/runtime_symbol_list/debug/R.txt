@@ -3314,6 +3314,10 @@ int id easeOut 0x7f0800b4
 int id east 0x7f0800b5
 int id edge 0x7f0800b6
 int id editFragment 0x7f0800b7
+int id editText1 0x7f080218
+int id editText2 0x7f080219
+int id editText3 0x7f08021a
+int id editText4 0x7f08021b
 int id edit_query 0x7f0800b8
 int id edit_text_id 0x7f0800b9
 int id elastic 0x7f0800ba

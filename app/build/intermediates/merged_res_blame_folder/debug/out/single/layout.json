@@ -1,7 +1,7 @@
 [
     {
-        "merged": "com.example.laba2.app-mergeDebugResources-68:/layout/detail_fragment.xml",
-        "source": "com.example.laba2.app-main-71:/layout/detail_fragment.xml"
+        "merged": "com.example.laba2.app-mergeDebugResources-68:/layout/edit_fragment.xml",
+        "source": "com.example.laba2.app-main-71:/layout/edit_fragment.xml"
     },
     {
         "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-mergeDebugResources-68:\\layout\\edit_fragment.xml",

@@ -28,7 +28,7 @@
         <argument
             android:name="description"
             app:argType="string" />
-        <argument android:name="processor"
+        <argument android:name="cpu"
             app:argType="string" />
         <argument
             android:name="ram"
@@ -45,5 +45,15 @@
         <action
             android:id="@+id/action_editFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument android:name="description"
+            app:argType="string" />
+        <argument android:name="cpu"
+            app:argType="string" />
+        <argument
+            android:name="ram"
+            app:argType="string" />
     </fragment>
 </navigation>

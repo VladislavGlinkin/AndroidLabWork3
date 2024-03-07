@@ -8,7 +8,7 @@ import kotlin.String
 public class ListFragmentDirections private constructor() {
   private data class ActionListFragmentToDetailFragment(
     public val description: String,
-    public val processor: String,
+    public val cpu: String,
     public val ram: String,
     public val title: String,
   ) : NavDirections {
@@ -18,7 +18,7 @@ public class ListFragmentDirections private constructor() {
       get() {
         val result = Bundle()
         result.putString("description", this.description)
-        result.putString("processor", this.processor)
+        result.putString("cpu", this.cpu)
         result.putString("ram", this.ram)
         result.putString("title", this.title)
         return result
@@ -28,9 +28,9 @@ public class ListFragmentDirections private constructor() {
   public companion object {
     public fun actionListFragmentToDetailFragment(
       description: String,
-      processor: String,
+      cpu: String,
       ram: String,
       title: String,
-    ): NavDirections = ActionListFragmentToDetailFragment(description, processor, ram, title)
+    ): NavDirections = ActionListFragmentToDetailFragment(description, cpu, ram, title)
   }
 }

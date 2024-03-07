@@ -18,6 +18,10 @@ id button2
 id button3
 id detailFragment
 id editFragment
+id editText1
+id editText2
+id editText3
+id editText4
 id fragmentContainerView
 id imageButton
 id imageButton2

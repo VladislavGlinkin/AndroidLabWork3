@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
@@ -27,13 +28,30 @@ public final class EditFragmentBinding implements ViewBinding {
   public final Button button3;
 
   @NonNull
+  public final EditText editText1;
+
+  @NonNull
+  public final EditText editText2;
+
+  @NonNull
+  public final EditText editText3;
+
+  @NonNull
+  public final EditText editText4;
+
+  @NonNull
   public final Toolbar toolbar3;
 
   private EditFragmentBinding(@NonNull ConstraintLayout rootView, @NonNull Button button,
-      @NonNull Button button3, @NonNull Toolbar toolbar3) {
+      @NonNull Button button3, @NonNull EditText editText1, @NonNull EditText editText2,
+      @NonNull EditText editText3, @NonNull EditText editText4, @NonNull Toolbar toolbar3) {
     this.rootView = rootView;
     this.button = button;
     this.button3 = button3;
+    this.editText1 = editText1;
+    this.editText2 = editText2;
+    this.editText3 = editText3;
+    this.editText4 = editText4;
     this.toolbar3 = toolbar3;
   }
 
@@ -76,13 +94,38 @@ public final class EditFragmentBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.editText1;
+      EditText editText1 = ViewBindings.findChildViewById(rootView, id);
+      if (editText1 == null) {
+        break missingId;
+      }
+
+      id = R.id.editText2;
+      EditText editText2 = ViewBindings.findChildViewById(rootView, id);
+      if (editText2 == null) {
+        break missingId;
+      }
+
+      id = R.id.editText3;
+      EditText editText3 = ViewBindings.findChildViewById(rootView, id);
+      if (editText3 == null) {
+        break missingId;
+      }
+
+      id = R.id.editText4;
+      EditText editText4 = ViewBindings.findChildViewById(rootView, id);
+      if (editText4 == null) {
+        break missingId;
+      }
+
       id = R.id.toolbar3;
       Toolbar toolbar3 = ViewBindings.findChildViewById(rootView, id);
       if (toolbar3 == null) {
         break missingId;
       }
 
-      return new EditFragmentBinding((ConstraintLayout) rootView, button, button3, toolbar3);
+      return new EditFragmentBinding((ConstraintLayout) rootView, button, button3, editText1,
+          editText2, editText3, editText4, toolbar3);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

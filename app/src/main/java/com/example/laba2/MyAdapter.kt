@@ -7,29 +7,30 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.laba2.databinding.ListItemBinding
 
 class MyAdapter(
-    private val dataSet: MutableList<ItemData>,
+    private val viewModel: ItemDataViewModel,
     private val navController: NavController
 ) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ViewHolder(binding, dataSet, this, navController)
+        return ViewHolder(binding, navController, viewModel)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(dataSet[position])
+        val item = viewModel.dataList.value?.get(position)
+        item?.let {
+            holder.bind(it)
+        }
     }
 
     override fun getItemCount(): Int {
-        return dataSet.size
+        return viewModel.dataList.value?.size ?: 0
     }
-
 
     class ViewHolder(
         private val binding: ListItemBinding,
-        private val dataSet: MutableList<ItemData>,
-        private val adapter: MyAdapter,
-        private val navController: NavController
+        private val navController: NavController,
+        private val viewModel: ItemDataViewModel
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: ItemData) {
@@ -38,22 +39,21 @@ class MyAdapter(
                 val action = ListFragmentDirections.actionListFragmentToDetailFragment(
                     title = item.title,
                     description = item.description,
-                    processor = item.processor,
+                    cpu = item.cpu,
                     ram = item.ram
                 )
                 navController.navigate(action)
             }
             val deleteButton = binding.imageButton
             deleteButton.setOnClickListener {
-                val position = adapterPosition
-                if (position != RecyclerView.NO_POSITION) {
-                    dataSet.removeAt(position)
-                    adapter.notifyItemRemoved(position)
-                }
+                // Удаление элемента из списка через ViewModel
+                // Передавайте объект ItemData, а не позицию, чтобы правильно определить, какой элемент удалить
+                viewModel.removeItem(item)
             }
         }
     }
 }
+
 
 
 

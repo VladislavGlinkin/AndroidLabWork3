@@ -3,12 +3,13 @@ package com.example.laba2
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import kotlin.concurrent.timerTask
 
 data class ItemData(
-    val title: String,
-    val description: String,
-    val processor: String,
-    val ram: String
+    var title: String,
+    var description: String,
+    var cpu: String,
+    var ram: String
 )
 
 class ItemDataViewModel : ViewModel() {

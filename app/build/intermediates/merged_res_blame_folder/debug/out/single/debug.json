@@ -4,6 +4,50 @@
         "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.laba2.app-merged_res-69:/layout_edit_fragment.xml.flat",
+        "source": "com.example.laba2.app-main-71:/layout/edit_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\layout_list_fragment.xml.flat",
+        "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\layout\\list_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\mipmap-anydpi\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.laba2.app-merged_res-69:/navigation_nav_graph.xml.flat",
+        "source": "com.example.laba2.app-main-71:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\layout_list_item.xml.flat",
+        "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\layout\\list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\mipmap-anydpi\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
         "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
@@ -20,24 +64,12 @@
         "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\layout\\detail_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\drawable_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\drawable\\ic_launcher_foreground.xml"
-    },
-    {
-        "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\mipmap-hdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\mipmap-xhdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\xml\\data_extraction_rules.xml"
     },
     {
         "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\layout_edit_fragment.xml.flat",
@@ -48,28 +80,8 @@
         "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\drawable\\ic_launcher_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\layout_list_fragment.xml.flat",
-        "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\layout\\list_fragment.xml"
-    },
-    {
-        "merged": "com.example.laba2.app-merged_res-69:/layout_detail_fragment.xml.flat",
-        "source": "com.example.laba2.app-main-71:/layout/detail_fragment.xml"
-    },
-    {
-        "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\mipmap-anydpi_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\mipmap-anydpi\\ic_launcher_round.xml"
-    },
-    {
-        "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\layout_list_item.xml.flat",
-        "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\layout\\list_item.xml"
     },
     {
         "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\navigation_nav_graph.xml.flat",
@@ -80,15 +92,7 @@
         "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\mipmap-anydpi_ic_launcher.xml.flat",
-        "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\mipmap-anydpi\\ic_launcher.xml"
-    },
-    {
         "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\mipmap-xxhdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-merged_res-69:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Vladi\\.gradle\\daemon\\8.2\\com.example.laba2.app-main-71:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     }
 ]

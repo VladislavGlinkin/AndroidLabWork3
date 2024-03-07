@@ -9,14 +9,14 @@ import kotlin.jvm.JvmStatic
 
 public data class DetailFragmentArgs(
   public val description: String,
-  public val processor: String,
+  public val cpu: String,
   public val ram: String,
   public val title: String,
 ) : NavArgs {
   public fun toBundle(): Bundle {
     val result = Bundle()
     result.putString("description", this.description)
-    result.putString("processor", this.processor)
+    result.putString("cpu", this.cpu)
     result.putString("ram", this.ram)
     result.putString("title", this.title)
     return result
@@ -25,7 +25,7 @@ public data class DetailFragmentArgs(
   public fun toSavedStateHandle(): SavedStateHandle {
     val result = SavedStateHandle()
     result.set("description", this.description)
-    result.set("processor", this.processor)
+    result.set("cpu", this.cpu)
     result.set("ram", this.ram)
     result.set("title", this.title)
     return result
@@ -44,14 +44,14 @@ public data class DetailFragmentArgs(
       } else {
         throw IllegalArgumentException("Required argument \"description\" is missing and does not have an android:defaultValue")
       }
-      val __processor : String?
-      if (bundle.containsKey("processor")) {
-        __processor = bundle.getString("processor")
-        if (__processor == null) {
-          throw IllegalArgumentException("Argument \"processor\" is marked as non-null but was passed a null value.")
+      val __cpu : String?
+      if (bundle.containsKey("cpu")) {
+        __cpu = bundle.getString("cpu")
+        if (__cpu == null) {
+          throw IllegalArgumentException("Argument \"cpu\" is marked as non-null but was passed a null value.")
         }
       } else {
-        throw IllegalArgumentException("Required argument \"processor\" is missing and does not have an android:defaultValue")
+        throw IllegalArgumentException("Required argument \"cpu\" is missing and does not have an android:defaultValue")
       }
       val __ram : String?
       if (bundle.containsKey("ram")) {
@@ -71,7 +71,7 @@ public data class DetailFragmentArgs(
       } else {
         throw IllegalArgumentException("Required argument \"title\" is missing and does not have an android:defaultValue")
       }
-      return DetailFragmentArgs(__description, __processor, __ram, __title)
+      return DetailFragmentArgs(__description, __cpu, __ram, __title)
     }
 
     @JvmStatic
@@ -85,14 +85,14 @@ public data class DetailFragmentArgs(
       } else {
         throw IllegalArgumentException("Required argument \"description\" is missing and does not have an android:defaultValue")
       }
-      val __processor : String?
-      if (savedStateHandle.contains("processor")) {
-        __processor = savedStateHandle["processor"]
-        if (__processor == null) {
-          throw IllegalArgumentException("Argument \"processor\" is marked as non-null but was passed a null value")
+      val __cpu : String?
+      if (savedStateHandle.contains("cpu")) {
+        __cpu = savedStateHandle["cpu"]
+        if (__cpu == null) {
+          throw IllegalArgumentException("Argument \"cpu\" is marked as non-null but was passed a null value")
         }
       } else {
-        throw IllegalArgumentException("Required argument \"processor\" is missing and does not have an android:defaultValue")
+        throw IllegalArgumentException("Required argument \"cpu\" is missing and does not have an android:defaultValue")
       }
       val __ram : String?
       if (savedStateHandle.contains("ram")) {
@@ -112,7 +112,7 @@ public data class DetailFragmentArgs(
       } else {
         throw IllegalArgumentException("Required argument \"title\" is missing and does not have an android:defaultValue")
       }
-      return DetailFragmentArgs(__description, __processor, __ram, __title)
+      return DetailFragmentArgs(__description, __cpu, __ram, __title)
     }
   }
 }
