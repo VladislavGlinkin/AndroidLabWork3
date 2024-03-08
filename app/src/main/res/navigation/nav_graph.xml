@@ -55,5 +55,8 @@
         <argument
             android:name="ram"
             app:argType="string" />
+        <action
+            android:id="@+id/action_editFragment_to_listFragment"
+            app:destination="@id/listFragment" />
     </fragment>
 </navigation>

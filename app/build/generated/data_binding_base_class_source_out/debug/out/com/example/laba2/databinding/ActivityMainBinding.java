@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentContainerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.laba2.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -20,11 +21,16 @@ public final class ActivityMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final BottomNavigationView bottomNavigationView;
+
+  @NonNull
   public final FragmentContainerView fragmentContainerView;
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView,
+      @NonNull BottomNavigationView bottomNavigationView,
       @NonNull FragmentContainerView fragmentContainerView) {
     this.rootView = rootView;
+    this.bottomNavigationView = bottomNavigationView;
     this.fragmentContainerView = fragmentContainerView;
   }
 
@@ -55,13 +61,20 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bottomNavigationView;
+      BottomNavigationView bottomNavigationView = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNavigationView == null) {
+        break missingId;
+      }
+
       id = R.id.fragmentContainerView;
       FragmentContainerView fragmentContainerView = ViewBindings.findChildViewById(rootView, id);
       if (fragmentContainerView == null) {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, fragmentContainerView);
+      return new ActivityMainBinding((ConstraintLayout) rootView, bottomNavigationView,
+          fragmentContainerView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

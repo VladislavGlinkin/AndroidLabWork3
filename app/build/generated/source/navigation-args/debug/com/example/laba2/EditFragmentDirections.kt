@@ -1,6 +1,7 @@
 package com.example.laba2
 
 import android.os.Bundle
+import androidx.navigation.ActionOnlyNavDirections
 import androidx.navigation.NavDirections
 import kotlin.Int
 import kotlin.String
@@ -32,5 +33,8 @@ public class EditFragmentDirections private constructor() {
       ram: String,
       title: String,
     ): NavDirections = ActionEditFragmentToDetailFragment(description, cpu, ram, title)
+
+    public fun actionEditFragmentToListFragment(): NavDirections =
+        ActionOnlyNavDirections(R.id.action_editFragment_to_listFragment)
   }
 }
