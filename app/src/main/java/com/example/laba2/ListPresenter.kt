@@ -1,7 +1,5 @@
 package com.example.laba2
 
-import android.util.Log
-
 class ListPresenter(private val view: ListView, private val repository: ItemRepository) {
     fun loadItems() {
         // Получение списка элементов из репозитория и передача его в представление для обновления списка
