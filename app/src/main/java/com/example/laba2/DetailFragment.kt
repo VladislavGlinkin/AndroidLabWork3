@@ -5,25 +5,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.laba2.databinding.DetailFragmentBinding
 
-class DetailFragment : Fragment() {
-
+class DetailFragment : Fragment(), DetailView {
+    private lateinit var presenter: DetailPresenter
     private var _binding: DetailFragmentBinding? = null
     private val binding get() = _binding!!
-    private val viewModel: ItemDataViewModel by activityViewModels()
-    private lateinit var adapter: MyAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Надуваем макет detail_fragment.xml
+        // Inflate the layout for this fragment
         _binding = DetailFragmentBinding.inflate(inflater, container, false)
         val view = binding.root
+
         val returnButton = binding.imageButton3
         val editButton = binding.button2
 
@@ -33,7 +31,7 @@ class DetailFragment : Fragment() {
         val cpu = args.cpu
         val ram = args.ram
 
-        adapter = MyAdapter(viewModel, findNavController())
+        presenter = DetailPresenter(this)
 
         editButton.setOnClickListener {
             val action = DetailFragmentDirections.actionDetailFragmentToEditFragment(
@@ -47,20 +45,18 @@ class DetailFragment : Fragment() {
 
         returnButton.setOnClickListener{
             findNavController().navigate(R.id.action_detailFragment_to_listFragment)
-            adapter.notifyDataSetChanged()
         }
 
-
-        binding.textView2.text = "Название: " + title
-        binding.textView3.text = "Описание: " + description
-        binding.textView4.text = "Процессор: " + cpu
-        binding.textView5.text = "Объём оперативной памяти: " + ram
+        presenter.getItemDetails(ItemData(title, description, cpu, ram))
 
         return view
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    override fun showItemDetails(item: ItemData) {
+        binding.textView2.text = "Название: ${item.title}"
+        binding.textView3.text = "Описание: ${item.description}"
+        binding.textView4.text = "Процессор: ${item.cpu}"
+        binding.textView5.text = "Объём оперативной памяти: ${item.ram}"
     }
 }
+

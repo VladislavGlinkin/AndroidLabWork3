@@ -1,51 +1,45 @@
 package com.example.laba2
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.compose.animation.core.animateDpAsState
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.laba2.databinding.ListFragmentBinding
 
-class ListFragment : Fragment() {
-
+class ListFragment : Fragment(), ListView {
+    private lateinit var presenter: ListPresenter
+    private lateinit var adapter: MyAdapter
     private var _binding: ListFragmentBinding? = null
     private val binding get() = _binding!!
-    private lateinit var adapter: MyAdapter
-    private val viewModel: ItemDataViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Надуваем макет фрагмента
+        // Inflate the layout for this fragment
         _binding = ListFragmentBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        // Находим RecyclerView
         val recyclerView = binding.recyclerView
 
         val navController = findNavController()
-        // Создаем экземпляр адаптера и устанавливаем его для RecyclerView
-        adapter = MyAdapter(viewModel, navController)
+
+        presenter = ListPresenter(this, ItemRepository)
+        adapter = MyAdapter(presenter, navController)
+
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(activity)
 
-        viewModel.dataList.observe(viewLifecycleOwner) { _ ->
-            // Обновление RecyclerView с новыми данными
-            adapter.notifyDataSetChanged()
-        }
-
-        // Находим кнопку и устанавливаем слушатель нажатия
         val imageButton2 = binding.imageButton2
         imageButton2.setOnClickListener {
-            // Добавляем новый элемент в список данных
-            val newItem = ItemData("Название", "Описание", "Процессор", "Оперативная память")
-            viewModel.addItem(newItem)
+            presenter.addItem(ItemData("Название", "Описание", "Процессор", "Оперативная память"))
+            Log.d("OK", "${adapter.itemCount - 1}")
         }
 
         return view
@@ -53,13 +47,15 @@ class ListFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
+        updateList()
+    }
+
+    override fun updateList() {
         adapter.notifyDataSetChanged()
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        binding.recyclerView.adapter = null
-        _binding = null
+    override fun showItems(items: List<ItemData>) {
+        // Update your adapter with the new items
+        adapter.notifyDataSetChanged()
     }
 }
-
